@@ -13,7 +13,7 @@ Time spent: 10 hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.7.3
   - [ ] GIF Walkthrough: <img src="YoutubeUrlXSS.gif" alt ="Youtube URL XSS">
-  - [ ] Steps to recreate: An Admin must approve and publich or update a post with an youtube URL link. The URL link i used was <[embed src='https://youtube.com/embed/12345\x3csvg onload=alert(1)\x3e'][/embed]> . Everytime the user trys to refresh the page, there will be an alert and a popup will show. 
+  - [ ] Steps to recreate: An Admin must approve and publich or update a post with an youtube URL link. The URL link i used was [^1[embed src='https://youtube.com/embed/12345\x3csvg onload=alert(1)\x3e'][/embed]] . Everytime the user trys to refresh the page, there will be an alert and a popup will show. 
   - [ ] Affected source code:
     - [Link 1](https://blog.sucuri.net/2017/03/stored-xss-in-wordpress-core.html)
     
