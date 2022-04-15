@@ -23,39 +23,19 @@ Time spent: 10 hours spent in total
     - Tested in version: 4.2
     - Fixed in version: 4.4
   - [ ] GIF Walkthrough:  <img src="UserEnumeration.gif" alt ="User Enumeration">
-  - [ ] Steps to recreate: First type in "admin" for the username and "1234" for the password. Look at the error message that pops up. Then try "user" for the username and "1234" for the password.
+  - [ ] Steps to recreate: First type in "admin" for the username and "1234" for the password. Look at the error message that pops up. Then try "user" for the username and "1234" for the password. Look at the different error message that pops up.
   - [ ] Affected source code:
     - [Link 1](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-login.php)
     
-### 3. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+### 3. Vulnerability - XSS
+  - [ ] Summary: This XSS vulnerability found in preview theme function where one of the callbakcs takes as argument filters out onclick handlers. It is then possible for an attack to create an XSS sxript to inject.
+    - Vulnerability types: XSS
+    - Tested in version: 4.2
+    - Fixed in version: 4.2.4
+  - [ ] GIF Walkthrough: <img src="PreviewThemeXSS.gif" alt ="Preview Theme XSS">
+  - [ ] Steps to recreate: Either create a post or find a post and make a comment in the comments section the following injection ```<a href='/wp-admin/' title="" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(document.cookie)//'>Test</a> ```
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-    
-### 4. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
-    
-### 5. (Optional) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php) 
+    - [Link 1](https://core.trac.wordpress.org/browser/trunk/src/wp-includes/theme.php)
 
 ## Assets
 
@@ -71,6 +51,8 @@ GIFs created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while doing the work
+
+- I had some issues downloading wordpress and getting it to run on my local machine. It was allowing me to ping in my local machince and visit wordpress in my virtual machine but I was unable to visit the website in my local machine.
 
 ## License
 
