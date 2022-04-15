@@ -3,7 +3,7 @@
 
 Time spent: 10 hours spent in total
 
-> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version of WordPress
+> Objective: Find, analyze, recreate, and document **five vulnerabilities** affecting an old version (4.2) of WordPress
 
 ## Pentesting Report
 
@@ -17,15 +17,15 @@ Time spent: 10 hours spent in total
   - [ ] Affected source code:
     - [Link 1](https://blog.sucuri.net/2017/03/stored-xss-in-wordpress-core.html)
     
-### 2. (Required) Vulnerability Name or ID
-  - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
-  - [ ] GIF Walkthrough: 
-  - [ ] Steps to recreate: 
+### 2.Vulnerability - User Enumeration
+  - [ ] Summary: Different messages show up for valid usernames with the wrong password and invalied usernames wiht the wrong password. This can lead to an user enumeration. 
+    - Vulnerability types: User Enumeration
+    - Tested in version: 4.2
+    - Fixed in version: 4.4
+  - [ ] GIF Walkthrough:  <img src="UserEnumeration.gif" alt ="User Enumeration">
+  - [ ] Steps to recreate: First type in "admin" for the username and "1234" for the password. Look at the error message that pops up. Then try "user" for the username and "1234" for the password.
   - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+    - [Link 1](https://core.trac.wordpress.org/browser/tags/4.2/src/wp-login.php)
     
 ### 3. (Required) Vulnerability Name or ID
   - [ ] Summary: 
